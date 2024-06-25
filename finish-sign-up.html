@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Completed | Checkout</title>
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+
+    <script src="components/atoms/Input/index.js" defer></script>
+    <script src="components/atoms/Typography/index.js" defer></script>
+    <script src="components/atoms/Button/index.js" defer></script>
+    <script src="components/atoms/CheckBox/index.js" defer></script>
+    <script src="components/atoms/RadioButton/index.js" defer></script>
+    <script src="components/atoms/Select/index.js" defer></script>
+  </head>
+  <body>
+    <header-component></header-component>
+
+    <div class="container finish-sign-up">
+      <div class="finish-sign-up-wrapper">
+        <pr-typography
+          text="Finish sign up"
+          type="h1"
+          elem-class="finish-sign-up-title"
+        ></pr-typography>
+        <pr-typography
+          text="We need a bit more data before you can access your materials."
+          type="h5"
+          elem-class="finish-sign-up-subtitle"
+        ></pr-typography>
+
+        <div class="finish-sign-up-form">
+          <pr-input
+            placeholder="College graduation year"
+            id="graduation-year"
+          ></pr-input>
+          <pr-input placeholder="School ZIP code" id="school-zip"></pr-input>
+          <pr-input
+            placeholder="Current or last school"
+            id="current-or-last-school"
+          ></pr-input>
+        </div>
+        
+        <pr-button
+          label="Access your order"
+          elem-class="btn-default access-order-btn"
+        ></pr-button>
+      </div>
+    </div>
+
+    <footer-component></footer-component>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

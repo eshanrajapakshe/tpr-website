@@ -1,0 +1,78 @@
+.input-group {
+  position: relative;
+  border: 2px solid var(--gainsboro);
+  border-radius: 40px;
+  overflow: hidden;
+  padding: 0 24px;
+}
+
+.pr-input {
+  font-size: 18px;
+  padding: 15px 0 5px 0;
+  display: block;
+  
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  border: none;
+  width: 100%;
+}
+
+.pr-input:focus {
+  outline: none;
+}
+
+.input-label {
+  color: #999;
+  overflow: hidden;
+  color: var(--TPR-Text-muted, #737373);
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 24px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.pr-input:focus ~ label,
+.pr-input:valid ~ label {
+  top: 4px;
+  overflow: hidden;
+  color: #737373;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.input-group:focus-within {
+  border-color: var(--green-haze, #06a77c);
+}
+
+.toggle-password {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.2s;
+}
+
+.toggle-password:hover {
+  background-color: #f7f7f7;
+}

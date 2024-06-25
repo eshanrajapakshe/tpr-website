@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TPR</title>
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+
+    <script src="components/atoms/Input/index.js" defer></script>
+    <script src="components/atoms/Typography/index.js" defer></script>
+    <script src="components/atoms/Button/index.js" defer></script>
+    <script src="components/atoms/CheckBox/index.js" defer></script>
+    <script src="components/atoms/RadioButton/index.js" defer></script>
+    <script src="components/atoms/Select/index.js" defer></script>
+  </head>
+  <body>
+    <header-component></header-component>
+
+    <div class="container cart-wrapper">
+      <div class="cart-title">
+        <pr-typography
+          text="Cart"
+          type="h1"
+          elem-class="main-heading"
+        ></pr-typography>
+        <pr-typography
+          text="(2 items)"
+          type="h4"
+          elem-class="title-cart-count"
+        ></pr-typography>
+      </div>
+
+      <!-- Cart -->
+      <div class="cart-main">
+        <div class="cart-items-main">
+          <div class="card-style-1 cart">
+            <!-- Cart Items -->
+            <div class="cart-items-wrapper">
+              <div class="cart-item">
+                <div class="cart-item_info_wrapper">
+                  <pr-typography
+                    text="MCAT 515+ Summer Immersion LiveOnline"
+                    type="h4"
+                    elem-class="cart-item_title"
+                  ></pr-typography>
+                  <pr-typography
+                    text="6/15/24 - 8/3/24"
+                    type="h5"
+                    elem-class="cart-item_date"
+                  ></pr-typography>
+                  <pr-typography
+                    text="Online Classroom"
+                    type="h6"
+                    elem-class="cart-item_type"
+                  ></pr-typography>
+                  <pr-typography
+                    text="Course 535271"
+                    type="h6"
+                    elem-class="cart-item_course_no"
+                  ></pr-typography>
+                </div>
+
+                <div class="cart-item_price_wrapper">
+                  <pr-typography
+                    text="$6,849.00"
+                    type="h4"
+                    elem-class="cart-item_price"
+                  ></pr-typography>
+                  <pr-typography
+                    text="$7,349.00"
+                    type="h5"
+                    elem-class="cart-item_price-before-discount"
+                  ></pr-typography>
+                  <pr-typography
+                    text="Promo: NEWYEARS"
+                    type="h6"
+                    elem-class="cart-item_promo"
+                  ></pr-typography>
+                </div>
+
+                <div class="cart-item_remove_wrapper">
+                  <button class="cart-item_remove">
+                    <img src="./assets/images/close.svg" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-includes-wrapper">
+              <pr-typography
+                text="Includes:"
+                type="h5"
+                elem-class="cart-includes-title"
+              ></pr-typography>
+
+              <div class="cart-included-items-wrapper">
+                <div class="cart-included-item">
+                  <img src="./assets/images/icon-checkmark.svg" alt="" />
+                  <pr-typography
+                    text="MCAT Optional Topic Focus Sessions"
+                    type="h6"
+                    elem-class="cart-included-item_title"
+                  ></pr-typography>
+                </div>
+                <div class="cart-included-item">
+                  <img src="./assets/images/icon-checkmark.svg" alt="" />
+                  <pr-typography
+                    text="MCAT Optional Topic Focus Sessions"
+                    type="h6"
+                    elem-class="cart-included-item_title"
+                  ></pr-typography>
+                </div>
+              </div>
+            </div>
+
+            <div class="pay-type-wrapper">
+              <div class="pay-type">
+                <pr-radio-button
+                  elem-id="pay-full"
+                  name="pay-type"
+                ></pr-radio-button>
+                <div class="pay-type-info">
+                  <pr-typography
+                    text="Pay in full:"
+                    type="h5"
+                    elem-class="pay-type-title"
+                  ></pr-typography>
+                  <pr-typography
+                    text="$6,849.00"
+                    type="h5"
+                    elem-class="pay-type-price"
+                  ></pr-typography>
+                </div>
+              </div>
+
+              <!-- Pay type -->
+              <div class="pay-type pay-type-deposit">
+                <pr-radio-button
+                  elem-id="pay-deposit"
+                  name="pay-type"
+                ></pr-radio-button>
+                <div class="pay-type-info-wrapper">
+                  <div class="pay-type-info">
+                    <pr-typography
+                      text="Pay Deposit:"
+                      type="h5"
+                      elem-class="pay-type-title"
+                    ></pr-typography>
+                    <pr-typography
+                      text="$499.00"
+                      type="h5"
+                      elem-class="pay-type-price"
+                    ></pr-typography>
+                  </div>
+                  <div class="pay-type-details">
+                    <pr-typography
+                      text="Remaining balance charged 10 days prior to course date."
+                      type="h5"
+                      elem-class="pay-type-details-text"
+                    ></pr-typography>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Extra includes -->
+              <div class="extra-includes-wrapper">
+                <div class="extra-includes-header">
+                  <div class="extra-includes-title">
+                    <img src="./assets/images/lawhub.svg" alt="" />
+                    <pr-typography
+                      text="LawHub Advantage"
+                      type="h5"
+                      elem-class="extra-include"
+                    ></pr-typography>
+                  </div>
+
+                  <div class="extra-includes-value">
+                    <pr-typography
+                      text="$115.00 (Included)"
+                      type="h5"
+                    ></pr-typography>
+                  </div>
+
+                  <button class="cart-item_remove">
+                    <img src="./assets/images/close.svg" />
+                  </button>
+                </div>
+                <div class="extra-includes-description">
+                  <pr-typography
+                    text="An LSAT Prep Plus is a required component of your prep that you will use to take practice tests. Already paid for a LawHub Advantage subscription directly with LSAC? Click the “X” icon above to reduce price by $115."
+                    type="h6"
+                    elem-class="extra-includes-description-text"
+                  ></pr-typography>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 2 -->
+          <div class="card-style-1 cart">
+            <div class="cart-items-wrapper">
+              <div class="cart-item">
+                <div class="cart-item_info_wrapper">
+                  <pr-typography
+                    text="50 Trickiest Questions for CFA Level 1 Quiz"
+                    type="h4"
+                    elem-class="cart-item_title"
+                  ></pr-typography>
+                </div>
+
+                <div class="cart-item_price_wrapper">
+                  <pr-typography
+                    text="$25.00"
+                    type="h4"
+                    elem-class="cart-item_price"
+                  ></pr-typography>
+                </div>
+
+                <div class="cart-item_remove_wrapper">
+                  <button class="cart-item_remove">
+                    <img src="./assets/images/close.svg" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 3 -->
+          <div class="card-style-1 cart">
+            <div class="cart-items-wrapper">
+              <div class="cart-item">
+                <div class="cart-item_info_wrapper">
+                  <pr-typography
+                    text="Homework Help"
+                    type="h4"
+                    elem-class="cart-item_title"
+                  ></pr-typography>
+
+                  <pr-typography
+                    text="7 Day Free Trial - 30 Minutes Free"
+                    type="h5"
+                    elem-class="cart-item_date"
+                  ></pr-typography>
+                  <pr-typography
+                    text="Homework Help is a monthly subscription. When the trial ends, you will be charged once a month for $79.99. If you cancel within 7 days, you will not be charged."
+                    type="h6"
+                    elem-class="cart-item_course_no"
+                  ></pr-typography>
+                </div>
+
+                <div class="cart-item_price_wrapper">
+                  <pr-typography
+                    text="Free"
+                    type="h4"
+                    elem-class="cart-item_price"
+                  ></pr-typography>
+                </div>
+
+                <div class="cart-item_remove_wrapper">
+                  <button class="cart-item_remove">
+                    <img src="./assets/images/close.svg" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="cart-select-option-wrapper">
+                <pr-select
+                  elem-id="course-select"
+                  elem-class="custom-select"
+                  value="course"
+                  options='[
+                  {"value": "course1", "text": "Course 1"},
+                  {"value": "course2", "text": "Course 2"},
+                  {"value": "course3", "text": "Course 3"}
+                ]'
+                >
+                </pr-select>
+
+                <div class="cart-options-more-info-wrapper">
+                  <div class="cart-options-more-info-item">
+                    <img src="./assets/images/card.svg" alt="" />
+                    <pr-typography
+                      text="Regular Rate: $79.99/month"
+                      type="h6"
+                      elem-class="cart-options-more-info-text"
+                    ></pr-typography>
+                  </div>
+                  <div class="cart-options-more-info-item">
+                    <img src="./assets/images/stopwatch.svg" alt="" />
+                    <pr-typography
+                      text="Tutoring Time: 2 hours/month"
+                      type="h6"
+                      elem-class="cart-options-more-info-text"
+                    ></pr-typography>
+                  </div>
+                </div>
+
+                <div class="extra-includes-wrapper">
+                  <div class="extra-includes-header">
+                    <div class="extra-includes-title">
+                      <img src="./assets/images/checked.svg" alt="" />
+                      <pr-typography
+                        text="Better Grades GuaranteeTM"
+                        type="h5"
+                        elem-class="extra-include"
+                      ></pr-typography>
+                    </div>
+                  </div>
+
+                  <div class="cart-included-items-wrapper">
+                    <div class="cart-included-item">
+                      <img src="./assets/images/icon-checkmark.svg" alt="" />
+                      <pr-typography
+                        text="30 minutes free. Use anytime in the next 7 days"
+                        type="h6"
+                        elem-class="cart-included-item_title"
+                      ></pr-typography>
+                    </div>
+                    <div class="cart-included-item">
+                      <img src="./assets/images/icon-checkmark.svg" alt="" />
+                      <pr-typography
+                        text="100% risk free. Cancel within 7 days and you won't be charged"
+                        type="h6"
+                        elem-class="cart-included-item_title"
+                      ></pr-typography>
+                    </div>
+                    <div class="cart-included-item">
+                      <img src="./assets/images/icon-checkmark.svg" alt="" />
+                      <pr-typography
+                        text="100% risk free. Cancel within 7 days and you won't be charged"
+                        type="h6"
+                        elem-class="24/7 access to the best tutors"
+                      ></pr-typography>
+                    </div>
+                  </div>
+
+                  <!-- Read More -->
+                  <div class="read-more-wrapper">
+                    <button type="button" class="read-more-btn">
+                      <span>Read More</span>
+                      <img
+                        src="./assets/images/arrow-down-2.svg"
+                        class="read-more-arrow"
+                        alt=""
+                      />
+                    </button>
+
+                    <div class="read-more-content">Hello!</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="card-style-2 order-summary">
+          <div class="order-summary-title">
+            <pr-typography text="Order Summary" type="h4"></pr-typography>
+          </div>
+
+          <div class="order-summary-info">
+            <div class="order-summary-info_item">
+              <pr-typography
+                text="Subtotal"
+                type="h5"
+                elem-class="summary-item-name"
+              ></pr-typography>
+              <pr-typography
+                text="$6,874.00"
+                type="h5"
+                elem-class="summary-item-price"
+              ></pr-typography>
+            </div>
+
+            <div class="order-summary-info_item item-heighted">
+              <pr-typography
+                text="Savings"
+                type="h5"
+                elem-class="summary-item-name"
+              ></pr-typography>
+              <pr-typography
+                text="-$500.00"
+                type="h5"
+                elem-class="summary-item-price"
+              ></pr-typography>
+            </div>
+
+            <div class="order-summary-info_item">
+              <pr-typography
+                text="Shipping"
+                type="h5"
+                elem-class="summary-item-name"
+              ></pr-typography>
+              <pr-typography
+                text="Free"
+                type="h5"
+                elem-class="summary-item-price"
+              ></pr-typography>
+            </div>
+
+            <div class="order-summary-info_item">
+              <pr-typography
+                text="Sales Tax"
+                type="h5"
+                elem-class="summary-item-name"
+              ></pr-typography>
+              <pr-typography
+                text="TBD"
+                type="h5"
+                elem-class="summary-item-price"
+              ></pr-typography>
+            </div>
+          </div>
+
+          <div class="accordion promo-code-wrapper">
+            <div class="accordion-header">
+              <pr-typography
+                text="Have a promo code?"
+                type="h5"
+                elem-class="promo-code-title"
+              ></pr-typography>
+              <button
+                type="button"
+                id="promo-accordion"
+                class="accordion-button"
+              >
+                <img
+                  src="./assets/images/arrow-down.svg"
+                  class="accordion-icon"
+                />
+              </button>
+            </div>
+
+            <div class="accordion-body">
+              <div class="promo-code-input-wrapper">
+                <pr-input placeholder="Promo code" id="promo-value"></pr-input>
+                <pr-button label="Apply" elem-class="btn-default"></pr-button>
+              </div>
+            </div>
+
+            <div class="estimated-total-wrapper">
+              <pr-typography
+                text="Estimated Total"
+                type="h4"
+                elem-class="estimated-total-title"
+              ></pr-typography>
+              <pr-typography
+                text="$6,374.00"
+                type="h4"
+                elem-class="estimated-total-price"
+              ></pr-typography>
+            </div>
+
+            <div class="order-btn-wrapper">
+              <pr-button
+                label="Go to checkout"
+                elem-class="btn-default order-btn"
+                onclick="window.location.href = 'checkout.html';"
+              ></pr-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customers benefit from -->
+    <div class="customers-benefit">
+      <div class="container">
+        <pr-typography
+          text="Test Prep customers also benefit from:"
+          type="h4"
+          elem-class="benefit-title"
+        ></pr-typography>
+
+        <div class="benefit-items-wrapper">
+          <div class="benefit-item card-style-1">
+            <div>Live Online Badge</div>
+            <pr-typography
+              text="Homework Help"
+              type="h3"
+              elem-class="benefit-item-title"
+            ></pr-typography>
+
+            <pr-typography
+              text="Stuck on homework? Get help from an expert tutor, instantly! Try a free session, no obligation."
+              type="h5"
+              elem-class="benefit-item-description"
+            ></pr-typography>
+
+            <hr class="benefit-item-hr" />
+
+            <pr-typography
+              text="From tackling tough homework assignments to studying for a big test or writing an essay, our tutors are available to help 24/7."
+              type="h5"
+              elem-class="benefit-item-description"
+            ></pr-typography>
+
+            <div class="benefit-ite-footer">
+              <pr-typography
+                text="$0"
+                type="h3"
+                elem-class="benefit-item-price"
+              ></pr-typography>
+
+              <pr-button
+                label="Add to Cart"
+                elem-class="btn-outline benefit-item-btn"
+              ></pr-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer-component></footer-component>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

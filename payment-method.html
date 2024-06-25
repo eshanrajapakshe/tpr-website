@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment | Checkout</title>
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+
+    <script src="components/atoms/Input/index.js" defer></script>
+    <script src="components/atoms/Typography/index.js" defer></script>
+    <script src="components/atoms/Button/index.js" defer></script>
+    <script src="components/atoms/CheckBox/index.js" defer></script>
+    <script src="components/atoms/RadioButton/index.js" defer></script>
+    <script src="components/atoms/Select/index.js" defer></script>
+  </head>
+  <body>
+    <header-component></header-component>
+
+    <div class="container cart-wrapper">
+      <div class="cart-title">
+        <pr-typography
+          text="Checkout"
+          type="h1"
+          elem-class="main-heading"
+        ></pr-typography>
+      </div>
+
+      <!-- Checkout -->
+      <div class="cart-main">
+        <div class="checkout-main">
+          <div class="create-an-account-wrapper">
+            <div class="checkout-section-title-wrapper">
+              <span><img src="./assets/images/check-mark.svg" alt="" /></span>
+              <pr-typography
+                text="Create an Account"
+                type="h3"
+                elem-class="checkout-section-title"
+              ></pr-typography>
+            </div>
+
+            <pr-typography
+              text="We’ll contact you about your order using this information."
+              type="h5"
+              elem-class="tell-us-text"
+            ></pr-typography>
+
+            <div class="collected-info-display">
+              <div class="collected-info-display-item">
+                <pr-typography
+                  text="Email address:"
+                  type="h5"
+                  elem-class="collected-info-title"
+                ></pr-typography>
+                <pr-typography
+                  text="johndoe@email.com"
+                  type="h5"
+                  elem-class="collected-info-data"
+                ></pr-typography>
+              </div>
+              <div class="collected-info-display-item">
+                <pr-typography
+                  text="Phone number:"
+                  type="h5"
+                  elem-class="collected-info-title"
+                ></pr-typography>
+                <pr-typography
+                  text="(123) 456-7890"
+                  type="h5"
+                  elem-class="collected-info-data"
+                ></pr-typography>
+              </div>
+            </div>
+          </div>
+
+          <!-- SHIPPING -->
+          <div class="shipping-wrapper">
+            <div class="checkout-section-title-wrapper edit-section-data">
+              <div class="checkout-section-title-inner">
+                <span><img src="./assets/images/check-mark.svg" alt="" /></span>
+                <pr-typography
+                  text="Shipping"
+                  type="h3"
+                  elem-class="checkout-section-title"
+                ></pr-typography>
+              </div>
+
+              <button type="button" class="section-edit-btn">Edit</button>
+            </div>
+
+            <div class="collected-info-display">
+              <div class="collected-info-display-item">
+                <pr-typography
+                  text="Shipping Address:"
+                  type="h5"
+                  elem-class="collected-info-title"
+                ></pr-typography>
+                <pr-typography
+                  text="John Doe
+                  1234 Street Ave
+                  New York, NY 12345"
+                  type="h5"
+                  elem-class="collected-info-data"
+                ></pr-typography>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-method-wrapper">
+            <div class="checkout-section-title-wrapper">
+              <span>3</span>
+              <pr-typography
+                text="Payment Method"
+                type="h3"
+                elem-class="checkout-section-title"
+              ></pr-typography>
+            </div>
+
+            <div class="select-payment-method-wrapper">
+              <!-- CREDIT CARD -->
+              <div class="payment-method-item">
+                <div class="payment-method-select">
+                  <div class="payment-method-name">
+                    <pr-radio-button id="credit-card"></pr-radio-button>
+                    <pr-typography
+                      text="Credit card"
+                      type="h5"
+                      elem-class="payment-method-text"
+                    ></pr-typography>
+                  </div>
+                  <div class="payment-method-icon">
+                    <img src="./assets/images/card_types.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="payment-method-data-collect">
+                  <pr-input placeholder="Card number" id="card-no"></pr-input>
+                  <div class="card-additional-info">
+                    <pr-input
+                      placeholder="Expiry date"
+                      id="exp-date"
+                    ></pr-input>
+                    <pr-input placeholder="CVV" id="cvv"></pr-input>
+                    <img src="./assets/images/card.svg" alt="" />
+                  </div>
+
+                  <pr-checkbox
+                    id="save-card"
+                    label="Remember this card"
+                  ></pr-checkbox>
+
+                  <pr-typography
+                    text="My billing address is..."
+                    type="h5"
+                    elem-class="billing-address-text"
+                  ></pr-typography>
+
+                  <div class="billing-address-option same-address">
+                    <pr-radio-button id="same"></pr-radio-button>
+                    <pr-typography
+                      text="Same as my shipping address"
+                      type="h5"
+                      elem-class="billing-address-option-text"
+                    ></pr-typography>
+                  </div>
+                  <div class="billing-address-option">
+                    <pr-radio-button id="different"></pr-radio-button>
+                    <pr-typography
+                      text="Different than my shipping address."
+                      type="h5"
+                      elem-class="billing-address-option-text"
+                    ></pr-typography>
+                  </div>
+
+                  <pr-typography
+                    text="Billing Address"
+                    type="h5"
+                    elem-class="different-address-title"
+                  ></pr-typography>
+
+                  <div class="different-address-data">
+                    <pr-input
+                      placeholder="First name"
+                      id="first-name"
+                    ></pr-input>
+                    <pr-input placeholder="Last name" id="last-name"></pr-input>
+                    <pr-input placeholder="Country" id="country"></pr-input>
+                    <pr-input
+                      placeholder="Street address"
+                      id="street"
+                    ></pr-input>
+                    <pr-input
+                      placeholder="Apt, suite, etc (optional)"
+                      id="apartment"
+                    ></pr-input>
+                    <pr-input placeholder="City" id="city"></pr-input>
+                    <div class="dual-wrapper">
+                      <pr-input placeholder="State" id="state"></pr-input>
+                      <pr-input placeholder="ZIP code" id="zip"></pr-input>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PAYPAL -->
+              <div class="payment-method-item">
+                <div class="payment-method-select">
+                  <div class="payment-method-name">
+                    <pr-radio-button id="paypal"></pr-radio-button>
+                    <pr-typography
+                      text="Paypal"
+                      type="h5"
+                      elem-class="payment-method-text"
+                    ></pr-typography>
+                  </div>
+                  <div class="payment-method-icon">
+                    <img src="./assets/images/paypal.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <pr-button
+                label="Review Your Order"
+                elem-class="btn-default shipping-btn"
+                onclick="window.location.href = 'checkout-completed.html';"
+              ></pr-button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="card-style-2 order-summary">
+          <div class="order-summary-title">
+            <pr-typography text="Order Summary" type="h4"></pr-typography>
+          </div>
+
+          <div class="accordion order-summary-cart-wrapper">
+            <div class="order-summary-cart">
+              <div class="order-summary-cart-info">
+                <img src="./assets/images/shopping_cart.svg" alt="" />
+                <pr-typography
+                  text="Cart"
+                  type="h5"
+                  elem-class="summary-cart-name"
+                ></pr-typography>
+                <pr-typography
+                  text="(2 items)"
+                  type="h5"
+                  elem-class="summary-cart-count"
+                ></pr-typography>
+              </div>
+
+              <button
+                type="button"
+                id="cart-accordion"
+                class="accordion-button"
+              >
+                <img
+                  src="./assets/images/arrow-down.svg"
+                  class="accordion-icon"
+                />
+              </button>
+            </div>
+
+            <div class="accordion-body">
+              <div class="order-summary-items-wrapper">
+                <div class="order-summary-item">
+                  <div class="order-summary-item-info">
+                    <div class="order-summary-item-info-inner">
+                      <pr-typography
+                        text="MCAT 515+ Summer Immersion LiveOnline"
+                        type="h5"
+                        elem-class="summary-item-name"
+                      ></pr-typography>
+                      <pr-typography
+                        text="6/15/24 - 8/3/24"
+                        type="h6"
+                        elem-class="cart-item_date"
+                      ></pr-typography>
+                      <pr-typography
+                        text="Online Classroom"
+                        type="h6"
+                        elem-class="cart-item_type"
+                      ></pr-typography>
+                      <pr-typography
+                        text="Course 535271"
+                        type="h6"
+                        elem-class="cart-item_course_no"
+                      ></pr-typography>
+                    </div>
+
+                    <div class="order-summary-item-price-inner">
+                      <pr-typography
+                        text="$6,849.00"
+                        type="h5"
+                        elem-class="summary-item-price"
+                      ></pr-typography>
+                      <pr-typography
+                        text="$7,349.00"
+                        type="h6"
+                        elem-class="summary-item-price-discount"
+                      ></pr-typography>
+                    </div>
+                  </div>
+
+                  <div class="cart-includes-wrapper">
+                    <pr-typography
+                      text="Includes:"
+                      type="h5"
+                      elem-class="cart-includes-title"
+                    ></pr-typography>
+
+                    <div class="cart-included-items-wrapper">
+                      <div class="cart-included-item">
+                        <img src="./assets/images/icon-checkmark.svg" alt="" />
+                        <pr-typography
+                          text="MCAT Optional Topic Focus Sessions"
+                          type="h6"
+                          elem-class="cart-included-item_title"
+                        ></pr-typography>
+                      </div>
+                      <div class="cart-included-item">
+                        <img src="./assets/images/icon-checkmark.svg" alt="" />
+                        <pr-typography
+                          text="MCAT Optional Topic Focus Sessions"
+                          type="h6"
+                          elem-class="cart-included-item_title"
+                        ></pr-typography>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-summary-item">
+                  <div class="order-summary-item-info">
+                    <div class="order-summary-item-info-inner">
+                      <pr-typography
+                        text="MCAT 515+ Summer Immersion LiveOnline"
+                        type="h5"
+                        elem-class="summary-item-name"
+                      ></pr-typography>
+                    </div>
+
+                    <div class="order-summary-item-price-inner">
+                      <pr-typography
+                        text="$6,849.00"
+                        type="h5"
+                        elem-class="summary-item-price"
+                      ></pr-typography>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-summary-info">
+            <div class="order-summary-info_item">
+              <pr-typography
+                text="Subtotal"
+                type="h5"
+                elem-class="summary-item-name"
+              ></pr-typography>
+              <pr-typography
+                text="$6,874.00"
+                type="h5"
+                elem-class="summary-item-price"
+              ></pr-typography>
+            </div>
+
+            <div class="order-summary-info_item item-heighted">
+              <pr-typography
+                text="Savings"
+                type="h5"
+                elem-class="summary-item-name"
+              ></pr-typography>
+              <pr-typography
+                text="-$500.00"
+                type="h5"
+                elem-class="summary-item-price"
+              ></pr-typography>
+            </div>
+
+            <div class="order-summary-info_item">
+              <pr-typography
+                text="Shipping"
+                type="h5"
+                elem-class="summary-item-name"
+              ></pr-typography>
+              <pr-typography
+                text="Free"
+                type="h5"
+                elem-class="summary-item-price"
+              ></pr-typography>
+            </div>
+
+            <div class="order-summary-info_item">
+              <pr-typography
+                text="Sales Tax"
+                type="h5"
+                elem-class="summary-item-name"
+              ></pr-typography>
+              <pr-typography
+                text="TBD"
+                type="h5"
+                elem-class="summary-item-price"
+              ></pr-typography>
+            </div>
+          </div>
+
+          <div class="accordion promo-code-wrapper">
+            <div class="accordion-header">
+              <pr-typography
+                text="Have a promo code?"
+                type="h5"
+                elem-class="promo-code-title"
+              ></pr-typography>
+              <button
+                type="button"
+                id="promo-accordion"
+                class="accordion-button"
+              >
+                <img
+                  src="./assets/images/arrow-down.svg"
+                  class="accordion-icon"
+                />
+              </button>
+            </div>
+
+            <div class="accordion-body">
+              <div class="promo-code-input-wrapper">
+                <pr-input placeholder="Promo code" id="promo-value"></pr-input>
+                <pr-button label="Apply" elem-class="btn-default"></pr-button>
+              </div>
+            </div>
+
+            <div class="estimated-total-wrapper">
+              <pr-typography
+                text="Total"
+                type="h4"
+                elem-class="estimated-total-title"
+              ></pr-typography>
+              <pr-typography
+                text="$6,374.00"
+                type="h4"
+                elem-class="estimated-total-price"
+              ></pr-typography>
+            </div>
+
+            <div class="agree-to-terms-wrapper">
+              <pr-checkbox
+                id="agree-to-terms"
+                label="I agree to the Terms of Use and Privacy Policy"
+              ></pr-checkbox>
+            </div>
+
+            <div class="order-btn-wrapper checkout-flow">
+              <pr-button
+                label="Place Order"
+                elem-class="btn-default order-btn"
+              ></pr-button>
+            </div>
+
+            <div class="questions-wrapper">
+              <pr-typography
+                text="Questions? Call"
+                type="h5"
+                elem-class="questions-title"
+              ></pr-typography>
+              <a href="tel:+1-800-273-8439">1-800-273-8439</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer-component></footer-component>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

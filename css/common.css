@@ -1,0 +1,254 @@
+/* fonts */
+
+/* Gotham-Black */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Gotham-BlackItalic */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Gotham-Bold */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Gotham-BoldItalic */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Gotham-Book */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Gotham-BookItalic */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-BookItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Gotham-Light */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Gotham-LightItalic */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Gotham-Medium */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Gotham-MediumItalic */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Gotham-Thin */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Gotham-ThinItalic */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Gotham-Ultra */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Ultra.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Gotham-UltraItalic */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-UltraItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Gotham-XLight */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-XLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Gotham-XLightItalic */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-XLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* palette */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  --blue-gray: #2a2d34;
+  --dim-gray: #585858;
+  --dark-gray: #737373;
+  --gainsboro: #d4d5d6;
+  --light-gray: #e0e0e0;
+  --lighter-gray: #f0f0f0;
+  --yellow-default: #f7d924;
+
+  --green-haze: #06a77c;
+  --green-dark: #068766;
+  --green-primary: #04684d;
+
+  --yellow-light: #fdfbe9;
+
+  --transparent-black: rgba(0, 0, 0, 0.05);
+  --dark-greenish: rgba(16, 40, 34, 0.05);
+
+  --red-50: #ffebee;
+  --selected: #0c8ce9;
+  --text-dissabled: #949699;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Gotham";
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  font-family: "Gotham";
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+
+  @media screen and (max-width: 1400px) {
+    max-width: 1320px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media screen and (max-width: 992px) {
+    max-width: 720px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 540px;
+  }
+
+  @media screen and (max-width: 576px) {
+    max-width: 100%;
+  }
+}
+
+.card-style-1 {
+  padding: 32px;
+  border-radius: 32px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 15px 3px rgb(0 0 0 / 5%);
+}
+
+.card-style-2 {
+  border: 1px solid var(--light-gray);
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.accordion-button:hover {
+  background-color: #e1f5fe;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotate {
+  transform: rotate(180deg);
+}

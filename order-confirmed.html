@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Completed | Checkout</title>
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+
+    <script src="components/atoms/Input/index.js" defer></script>
+    <script src="components/atoms/Typography/index.js" defer></script>
+    <script src="components/atoms/Button/index.js" defer></script>
+    <script src="components/atoms/CheckBox/index.js" defer></script>
+    <script src="components/atoms/RadioButton/index.js" defer></script>
+    <script src="components/atoms/Select/index.js" defer></script>
+  </head>
+  <body>
+    <header-component></header-component>
+
+    <div class="container order-confirmed">
+      <div class="confirmed-order-info">
+        <img src="./assets/images/check-mark-green.svg" alt="" />
+
+        <pr-typography
+          text="Order confirmed!"
+          type="h2"
+          elem-class="order-confirmed-title"
+        ></pr-typography>
+        <pr-typography
+          text="Order #12345678"
+          type="h5"
+          elem-class="order-number"
+        ></pr-typography>
+        <pr-typography
+          text="An email confirmation has been sent to"
+          type="h5"
+          elem-class="order-email-text"
+        ></pr-typography>
+        <pr-typography
+          text="johndoe@email.com"
+          type="h5"
+          elem-class="order-email-address"
+        ></pr-typography>
+
+        <pr-button
+          label="Access your order"
+          elem-class="btn-default access-your-order"
+        ></pr-button>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="card-style-2 confirmed-order-summary">
+        <div class="order-summary-title">
+          <img src="./assets/images/page.svg" alt="" />
+          <pr-typography text="Order Summary" type="h3"></pr-typography>
+        </div>
+
+        <div class="confirmed-order-summary-wrapper">
+          <div class="order-summary-item">
+            <div class="order-summary-item-info">
+              <div class="order-summary-item-info-inner">
+                <pr-typography
+                  text="MCAT 515+ Summer Immersion LiveOnline"
+                  type="h4"
+                  elem-class="summary-item-name"
+                ></pr-typography>
+                <pr-typography
+                  text="6/15/24 - 8/3/24"
+                  type="h5"
+                  elem-class="cart-item_date"
+                ></pr-typography>
+                <pr-typography
+                  text="Online Classroom"
+                  type="h5"
+                  elem-class="cart-item_type"
+                ></pr-typography>
+                <pr-typography
+                  text="Course 535271"
+                  type="h5"
+                  elem-class="cart-item_course_no"
+                ></pr-typography>
+              </div>
+
+              <div class="order-summary-item-price-inner">
+                <pr-typography
+                  text="$6,849.00"
+                  type="h4"
+                  elem-class="summary-item-price"
+                ></pr-typography>
+                <pr-typography
+                  text="$7,349.00"
+                  type="h5"
+                  elem-class="summary-item-price-discount"
+                ></pr-typography>
+              </div>
+            </div>
+
+            <div class="cart-includes-wrapper">
+              <pr-typography
+                text="Includes:"
+                type="h5"
+                elem-class="cart-includes-title"
+              ></pr-typography>
+
+              <div class="cart-included-items-wrapper">
+                <div class="cart-included-item">
+                  <img src="./assets/images/icon-checkmark.svg" alt="" />
+                  <pr-typography
+                    text="MCAT Optional Topic Focus Sessions"
+                    type="h5"
+                    elem-class="cart-included-item_title"
+                  ></pr-typography>
+                </div>
+                <div class="cart-included-item">
+                  <img src="./assets/images/icon-checkmark.svg" alt="" />
+                  <pr-typography
+                    text="MCAT Optional Topic Focus Sessions"
+                    type="h5"
+                    elem-class="cart-included-item_title"
+                  ></pr-typography>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-summary-item">
+            <div class="order-summary-item-info">
+              <div class="order-summary-item-info-inner">
+                <pr-typography
+                  text="MCAT 515+ Summer Immersion LiveOnline"
+                  type="h4"
+                  elem-class="summary-item-name"
+                ></pr-typography>
+              </div>
+
+              <div class="order-summary-item-price-inner">
+                <pr-typography
+                  text="$6,849.00"
+                  type="h4"
+                  elem-class="summary-item-price"
+                ></pr-typography>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-summary-info">
+          <div class="order-summary-info_item">
+            <pr-typography
+              text="Subtotal"
+              type="h5"
+              elem-class="summary-item-name"
+            ></pr-typography>
+            <pr-typography
+              text="$6,874.00"
+              type="h5"
+              elem-class="summary-item-price"
+            ></pr-typography>
+          </div>
+
+          <div class="order-summary-info_item item-heighted">
+            <pr-typography
+              text="Savings"
+              type="h5"
+              elem-class="summary-item-name"
+            ></pr-typography>
+            <pr-typography
+              text="-$500.00"
+              type="h5"
+              elem-class="summary-item-price"
+            ></pr-typography>
+          </div>
+
+          <div class="order-summary-info_item">
+            <pr-typography
+              text="Shipping"
+              type="h5"
+              elem-class="summary-item-name"
+            ></pr-typography>
+            <pr-typography
+              text="Free"
+              type="h5"
+              elem-class="summary-item-price"
+            ></pr-typography>
+          </div>
+
+          <div class="order-summary-info_item">
+            <pr-typography
+              text="Sales Tax"
+              type="h5"
+              elem-class="summary-item-name"
+            ></pr-typography>
+            <pr-typography
+              text="TBD"
+              type="h5"
+              elem-class="summary-item-price"
+            ></pr-typography>
+          </div>
+        </div>
+
+        <div class="estimated-total-wrapper">
+          <pr-typography
+            text="Total"
+            type="h4"
+            elem-class="estimated-total-title"
+          ></pr-typography>
+          <pr-typography
+            text="$6,374.00"
+            type="h4"
+            elem-class="estimated-total-price"
+          ></pr-typography>
+        </div>
+      </div>
+
+      <!-- Shipping Information -->
+      <div class="shipping-info-wrapper">
+        <div class="order-summary-title">
+          <img src="./assets/images/truck.svg" alt="" />
+          <pr-typography text="Shipping Information" type="h3"></pr-typography>
+        </div>
+
+        <div class="collected-info-display">
+          <div class="collected-info-display-item">
+            <pr-typography
+              text="Shipping Address:"
+              type="h5"
+              elem-class="collected-info-title"
+            ></pr-typography>
+            <pr-typography
+              text="John Doe
+              1234 Street Ave
+              New York, NY 12345"
+              type="h5"
+              elem-class="collected-info-data"
+            ></pr-typography>
+          </div>
+        </div>
+      </div>
+
+      <!-- Billing Information -->
+      <div class="billing-info-wrapper">
+        <div class="order-summary-title">
+          <img src="./assets/images/card-large.svg" alt="" />
+          <pr-typography text="Billing Information" type="h3"></pr-typography>
+        </div>
+
+        <div class="collected-info-display">
+          <div class="collected-payment-method">
+            <div class="method-wrapper">
+              <img src="./assets/images/visa.svg" alt="" />
+            </div>
+            <div class="method-info">
+              <pr-typography
+                text="card ending in 1112"
+                type="h5"
+                elem-class="collected-info-data"
+              ></pr-typography>
+              <pr-typography
+                text="Expires 10/24"
+                type="h5"
+                elem-class="collected-info-data"
+              ></pr-typography>
+            </div>
+          </div>
+        </div>
+
+        <div class="collected-info-display">
+          <div class="collected-info-display-item">
+            <pr-typography
+              text="Billing Address:"
+              type="h5"
+              elem-class="collected-info-title"
+            ></pr-typography>
+            <pr-typography
+              text="John Doe
+              1234 Street Ave
+              New York, NY 12345"
+              type="h5"
+              elem-class="collected-info-data"
+            ></pr-typography>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer-component></footer-component>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
