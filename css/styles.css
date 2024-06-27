@@ -145,34 +145,35 @@ header {
   gap: 12px;
 }
 
-.cart-item_title,
-.cart-item_price {
+h4.typography.cart-item_title,
+h4.typography.cart-item_price {
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
 }
 
-.cart-item_date {
+h5.typography.cart-item_date {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin: 4px 0;
 }
 
-.cart-item_type {
+h6.typography.cart-item_type {
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   color: var(--dim-gray);
 }
 
-.cart-item_course_no {
+h6.typography.cart-item_course_no {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: var(--dim-gray);
 }
 
-.cart-item_price-before-discount {
+h5.typography.cart-item_price-before-discount {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -186,7 +187,13 @@ header {
   width: 25%;
 }
 
-.cart-item_promo {
+.extra-includes-value h5{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+h6.typography.cart-item_promo {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -220,7 +227,7 @@ header {
   height: 13px;
 }
 
-.cart-included-item_title {
+h6.typography.cart-included-item_title {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -265,12 +272,12 @@ header {
 
 .promo-code-wrapper {
   margin-top: 28px;
-  padding-top: 28px;
+  padding-top: 24px;
   border-top: 1px solid var(--light-gray);
 }
 
 .promo-code-input-wrapper {
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -279,7 +286,7 @@ header {
 .estimated-total-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 28px;
+  margin-top: 24px;
   padding-top: 28px;
   border-top: 1px solid var(--light-gray);
 }
@@ -313,7 +320,7 @@ header {
   flex-direction: column;
 }
 
-.benefit-item-title {
+h3.typography.benefit-item-title {
   margin-top: 16px;
   margin-bottom: 8px;
   text-align: center;
@@ -324,7 +331,7 @@ header {
   letter-spacing: 0.02em;
 }
 
-.benefit-item-description {
+h5.typography.benefit-item-description {
   color: var(--blue-gray);
   font-size: 16px;
   font-weight: 400;
@@ -338,7 +345,7 @@ header {
   margin: 16px 0;
 }
 
-.benefit-item-price {
+h3.typography.benefit-item-price {
   color: var(--black);
   font-size: 24px;
   font-weight: 500;
@@ -392,7 +399,7 @@ header {
   line-height: 24px;
 }
 
-.pay-type-title {
+h5.typography.pay-type-title {
   font-weight: 400;
 }
 
@@ -400,7 +407,7 @@ header {
   font-weight: 500;
 }
 
-.pay-type-details-text {
+h5.typography.pay-type-details-text {
   color: var(--dim-gray);
   font-weight: 400;
 }
@@ -435,7 +442,7 @@ header {
   gap: 8px;
 }
 
-.extra-includes-description-text {
+h6.typography.extra-includes-description-text {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -457,7 +464,7 @@ header {
   gap: 12px;
 }
 
-.cart-options-more-info-text {
+h6.typography.cart-options-more-info-text {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -553,12 +560,12 @@ header {
   margin-top: 24px;
 }
 
-.account-info-text {
+h6.typography.account-info-text {
   font-weight: 400;
   line-height: 21px;
 }
 
-.account-privacy-text {
+h6.typography.account-privacy-text {
   font-weight: 500;
   line-height: 21px;
   text-decoration: underline;
@@ -1005,6 +1012,10 @@ h5.typography.finish-sign-up-subtitle {
   transition: all 0.3s ease;
   padding: 2px 6px;
   font-family: "Gotham";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: underline;
 }
 
 .forgot-password:hover {
@@ -1049,6 +1060,12 @@ pr-checkbox#keep-me-signed-in {
 
 .order-btn {
   gap: 16px;
+}
+
+h5.typography.billing-address-option-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 /* FOOTER */

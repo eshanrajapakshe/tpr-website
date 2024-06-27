@@ -28,16 +28,19 @@ class PRSelect extends HTMLElement {
 
     this.innerHTML = `<div class="select-input-group">      
         <label for="${id}">${label}</label>
-        <select name="${id}" id="${id}" class="pr-select ${className}">
-          ${options
-            .map(
-              (option) =>
-                `<option value="${option.value}" ${
-                  option.value === value ? "selected" : ""
-                }>${option.text}</option>`
-            )
-            .join("")}
-        </select>
+        <div class="select-wrapper">
+          <select name="${id}" id="${id}" class="pr-select ${className}">
+            ${options
+              .map(
+                (option) =>
+                  `<option value="${option.value}" ${
+                    option.value === value ? "selected" : ""
+                  }>${option.text}</option>`
+              )
+              .join("")}
+          </select>
+          <img src="../../../assets/images/dropdown-arrow.svg" class="custom-dropdown-icon" />
+        </div>
       </div>`;
 
     const inputElement = this.querySelector(`#${id}`);

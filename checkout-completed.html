@@ -100,8 +100,8 @@
                   elem-class="collected-info-title"
                 ></pr-typography>
                 <pr-typography
-                  text="John Doe
-                  1234 Street Ave
+                  text="John Doe <br />
+                  1234 Street Ave <br />
                   New York, NY 12345"
                   type="h5"
                   elem-class="collected-info-data"
@@ -171,32 +171,28 @@
           </div>
 
           <div class="accordion order-summary-cart-wrapper">
-            <div class="order-summary-cart">
-              <div class="order-summary-cart-info">
-                <img src="./assets/images/shopping_cart.svg" alt="" />
-                <pr-typography
-                  text="Cart"
-                  type="h5"
-                  elem-class="summary-cart-name"
-                ></pr-typography>
-                <pr-typography
-                  text="(2 items)"
-                  type="h5"
-                  elem-class="summary-cart-count"
-                ></pr-typography>
-              </div>
+            <button type="button" id="cart-accordion" class="accordion-button">
+              <div class="order-summary-cart">
+                <div class="order-summary-cart-info">
+                  <img src="./assets/images/shopping_cart.svg" alt="" />
+                  <pr-typography
+                    text="Cart"
+                    type="h5"
+                    elem-class="summary-cart-name"
+                  ></pr-typography>
+                  <pr-typography
+                    text="(2 items)"
+                    type="h5"
+                    elem-class="summary-cart-count"
+                  ></pr-typography>
+                </div>
 
-              <button
-                type="button"
-                id="cart-accordion"
-                class="accordion-button"
-              >
                 <img
                   src="./assets/images/arrow-down.svg"
                   class="accordion-icon"
                 />
-              </button>
-            </div>
+              </div>
+            </button>
 
             <div class="accordion-body">
               <div class="order-summary-items-wrapper">
@@ -345,23 +341,19 @@
           </div>
 
           <div class="accordion promo-code-wrapper">
-            <div class="accordion-header">
-              <pr-typography
-                text="Have a promo code?"
-                type="h5"
-                elem-class="promo-code-title"
-              ></pr-typography>
-              <button
-                type="button"
-                id="promo-accordion"
-                class="accordion-button"
-              >
+            <button type="button" id="promo-accordion" class="accordion-button">
+              <div class="accordion-header">
+                <pr-typography
+                  text="Have a promo code?"
+                  type="h5"
+                  elem-class="promo-code-title"
+                ></pr-typography>
                 <img
                   src="./assets/images/arrow-down.svg"
                   class="accordion-icon"
                 />
-              </button>
-            </div>
+              </div>
+            </button>
 
             <div class="accordion-body">
               <div class="promo-code-input-wrapper">

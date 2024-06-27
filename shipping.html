@@ -192,32 +192,28 @@
           </div>
 
           <div class="accordion order-summary-cart-wrapper">
-            <div class="order-summary-cart">
-              <div class="order-summary-cart-info">
-                <img src="./assets/images/shopping_cart.svg" alt="" />
-                <pr-typography
-                  text="Cart"
-                  type="h5"
-                  elem-class="summary-cart-name"
-                ></pr-typography>
-                <pr-typography
-                  text="(2 items)"
-                  type="h5"
-                  elem-class="summary-cart-count"
-                ></pr-typography>
-              </div>
+            <button type="button" id="cart-accordion" class="accordion-button">
+              <div class="order-summary-cart">
+                <div class="order-summary-cart-info">
+                  <img src="./assets/images/shopping_cart.svg" alt="" />
+                  <pr-typography
+                    text="Cart"
+                    type="h5"
+                    elem-class="summary-cart-name"
+                  ></pr-typography>
+                  <pr-typography
+                    text="(2 items)"
+                    type="h5"
+                    elem-class="summary-cart-count"
+                  ></pr-typography>
+                </div>
 
-              <button
-                type="button"
-                id="cart-accordion"
-                class="accordion-button"
-              >
                 <img
                   src="./assets/images/arrow-down.svg"
                   class="accordion-icon"
                 />
-              </button>
-            </div>
+              </div>
+            </button>
 
             <div class="accordion-body">
               <div class="order-summary-items-wrapper">
@@ -366,23 +362,19 @@
           </div>
 
           <div class="accordion promo-code-wrapper">
-            <div class="accordion-header">
-              <pr-typography
-                text="Have a promo code?"
-                type="h5"
-                elem-class="promo-code-title"
-              ></pr-typography>
-              <button
-                type="button"
-                id="promo-accordion"
-                class="accordion-button"
-              >
+            <button type="button" id="promo-accordion" class="accordion-button">
+              <div class="accordion-header">
+                <pr-typography
+                  text="Have a promo code?"
+                  type="h5"
+                  elem-class="promo-code-title"
+                ></pr-typography>
                 <img
                   src="./assets/images/arrow-down.svg"
                   class="accordion-icon"
                 />
-              </button>
-            </div>
+              </div>
+            </button>
 
             <div class="accordion-body">
               <div class="promo-code-input-wrapper">
@@ -415,6 +407,9 @@
               <pr-button
                 label="Place Order"
                 elem-class="btn-default order-btn"
+                disabled="true"
+                icon-url="./assets/images/arrow-right.svg"
+                icon-position="right"
               ></pr-button>
             </div>
 

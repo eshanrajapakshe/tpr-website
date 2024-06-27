@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TPR</title>
 
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-
     <script src="components/header.js" type="text/javascript" defer></script>
     <script src="components/footer.js" type="text/javascript" defer></script>
 
@@ -17,6 +14,9 @@
     <script src="components/atoms/CheckBox/index.js" defer></script>
     <script src="components/atoms/RadioButton/index.js" defer></script>
     <script src="components/atoms/Select/index.js" defer></script>
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header-component></header-component>
@@ -305,7 +305,7 @@
                     <div class="extra-includes-title">
                       <img src="./assets/images/checked.svg" alt="" />
                       <pr-typography
-                        text="Better Grades GuaranteeTM"
+                        text="Better Grades Guarantee<sup>TM</sup>"
                         type="h5"
                         elem-class="extra-include"
                       ></pr-typography>
@@ -334,7 +334,7 @@
                       <pr-typography
                         text="100% risk free. Cancel within 7 days and you won't be charged"
                         type="h6"
-                        elem-class="24/7 access to the best tutors"
+                        elem-class="cart-included-item_title"
                       ></pr-typography>
                     </div>
                   </div>
@@ -419,23 +419,19 @@
           </div>
 
           <div class="accordion promo-code-wrapper">
-            <div class="accordion-header">
-              <pr-typography
-                text="Have a promo code?"
-                type="h5"
-                elem-class="promo-code-title"
-              ></pr-typography>
-              <button
-                type="button"
-                id="promo-accordion"
-                class="accordion-button"
-              >
+            <button type="button" id="promo-accordion" class="accordion-button">
+              <div class="accordion-header">
+                <pr-typography
+                  text="Have a promo code?"
+                  type="h5"
+                  elem-class="promo-code-title"
+                ></pr-typography>
                 <img
                   src="./assets/images/arrow-down.svg"
                   class="accordion-icon"
                 />
-              </button>
-            </div>
+              </div>
+            </button>
 
             <div class="accordion-body">
               <div class="promo-code-input-wrapper">
@@ -462,6 +458,8 @@
                 label="Go to checkout"
                 elem-class="btn-default order-btn"
                 onclick="window.location.href = 'checkout.html';"
+                icon-url="./assets/images/arrow-right-white.svg"
+                icon-position="right"
               ></pr-button>
             </div>
           </div>

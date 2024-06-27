@@ -228,14 +228,15 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: auto;
   transition: all 0.3s ease;
   border-radius: 4px;
+  padding: 4px 6px;
 }
 
 .accordion-button:hover {
-  background-color: #e1f5fe;
+  background-color: #f7f7f7;
 }
 
 .accordion-body {

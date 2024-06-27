@@ -6,12 +6,39 @@
   outline: none;
   padding: 16px;
   cursor: pointer;
-  
+
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
 
 .pr-select:focus {
-  border-color: var(--green-haze, #06a77c);
+  border: 2px solid var(--green-haze, #06a77c);
+}
+
+.select-input-group {
+  position: relative;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.pr-select {
+  width: 100%;
+  padding-right: 30px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.custom-dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
 }
