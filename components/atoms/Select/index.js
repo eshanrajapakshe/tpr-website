@@ -39,7 +39,7 @@ class PRSelect extends HTMLElement {
               )
               .join("")}
           </select>
-          <img src="../../../assets/images/dropdown-arrow.svg" class="custom-dropdown-icon" />
+          <img src="./assets/images/dropdown-arrow.svg" class="custom-dropdown-icon" />
         </div>
       </div>`;
 
