@@ -14,6 +14,7 @@
     <script src="components/atoms/CheckBox/index.js" defer></script>
     <script src="components/atoms/RadioButton/index.js" defer></script>
     <script src="components/atoms/Select/index.js" defer></script>
+    <script src="components/atoms/Badge/index.js" defer></script>
 
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -118,6 +119,7 @@
               </div>
             </div>
 
+            <!-- Pay type -->
             <div class="pay-type-wrapper">
               <div class="pay-type">
                 <pr-radio-button
@@ -138,7 +140,6 @@
                 </div>
               </div>
 
-              <!-- Pay type -->
               <div class="pay-type pay-type-deposit">
                 <pr-radio-button
                   elem-id="pay-deposit"
@@ -167,36 +168,101 @@
                 </div>
               </div>
 
-              <!-- Extra includes -->
-              <div class="extra-includes-wrapper">
-                <div class="extra-includes-header">
-                  <div class="extra-includes-title">
-                    <img src="./assets/images/lawhub.svg" alt="" />
+              <div class="pay-type-equal-payments">
+                <div class="pay-type-equal-payments-header">
+                  <pr-radio-button
+                    elem-id="pay-installments"
+                    name="pay-type"
+                  ></pr-radio-button>
+                  <div class="pay-type-info">
                     <pr-typography
-                      text="LawHub Advantage"
+                      text="$499.00 + 3 Equal Payments"
                       type="h5"
-                      elem-class="extra-include"
+                      elem-class="equal-payments-pay-type-title"
                     ></pr-typography>
                   </div>
-
-                  <div class="extra-includes-value">
-                    <pr-typography
-                      text="$115.00 (Included)"
-                      type="h5"
-                    ></pr-typography>
-                  </div>
-
-                  <button class="cart-item_remove">
-                    <img src="./assets/images/close.svg" />
-                  </button>
                 </div>
-                <div class="extra-includes-description">
+
+                <div class="equal-payments-content">
+                  <div class="read-more-wrapper equal-payments-section">
+                    <button type="button" class="read-more-btn">
+                      <span>Read More</span>
+                      <img
+                        src="./assets/images/arrow-down-2.svg"
+                        class="read-more-arrow"
+                        alt=""
+                      />
+                    </button>
+
+                    <div class="read-more-content">
+                      <div class="timeline">
+                        <div class="timeline-item">
+                          <div class="timeline-marker"></div>
+                          <div class="timeline-content">
+                            <p class="installment-title">Deposit today</p>
+                            <h4>$544.99 + Tax</h4>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="timeline-marker"></div>
+                          <div class="timeline-content">
+                            <p class="installment-title">1st Installment</p>
+                            <h4>$833.33</h4>
+                            <p class="due-date">on 6/26/2024</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="timeline-marker"></div>
+                          <div class="timeline-content">
+                            <p class="installment-title">2nd Installment</p>
+                            <h4>$833.33</h4>
+                            <p class="due-date">on 7/16/2024</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="timeline-marker"></div>
+                          <div class="timeline-content">
+                            <p class="installment-title">3rd Installment</p>
+                            <h4>$833.33</h4>
+                            <p class="due-date">on 7/26/2024</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Extra includes -->
+            <div class="extra-includes-wrapper">
+              <div class="extra-includes-header">
+                <div class="extra-includes-title">
+                  <img src="./assets/images/lawhub.svg" alt="" />
                   <pr-typography
-                    text="An LSAT Prep Plus is a required component of your prep that you will use to take practice tests. Already paid for a LawHub Advantage subscription directly with LSAC? Click the “X” icon above to reduce price by $115."
-                    type="h6"
-                    elem-class="extra-includes-description-text"
+                    text="LawHub Advantage"
+                    type="h5"
+                    elem-class="extra-include"
                   ></pr-typography>
                 </div>
+
+                <div class="extra-includes-value">
+                  <pr-typography
+                    text="$115.00 (Included)"
+                    type="h5"
+                  ></pr-typography>
+                </div>
+
+                <button class="cart-item_remove">
+                  <img src="./assets/images/close.svg" />
+                </button>
+              </div>
+              <div class="extra-includes-description">
+                <pr-typography
+                  text="An LSAT Prep Plus is a required component of your prep that you will use to take practice tests. Already paid for a LawHub Advantage subscription directly with LSAC? Click the “X” icon above to reduce price by $115."
+                  type="h6"
+                  elem-class="extra-includes-description-text"
+                ></pr-typography>
               </div>
             </div>
           </div>
@@ -478,7 +544,8 @@
 
         <div class="benefit-items-wrapper">
           <div class="benefit-item card-style-1">
-            <div>Live Online Badge</div>
+            <pr-badge text="Live Online" type="success"></pr-badge>
+
             <pr-typography
               text="Homework Help"
               type="h3"

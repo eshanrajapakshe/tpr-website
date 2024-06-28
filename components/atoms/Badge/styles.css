@@ -1,0 +1,26 @@
+.badge {
+  display: inline-block;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 8px;
+}
+
+.badge-success {
+  color: var(--green);
+  background-color: var(--green-light, #d7f4e2);
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.badge-secondary {
+  color: #fff;
+  background-color: #6c757d;
+}
