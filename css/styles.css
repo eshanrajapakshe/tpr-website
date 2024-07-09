@@ -301,6 +301,10 @@ h6.typography.cart-included-item_title {
 }
 
 /* CUSTOMER BENEFITS */
+.carousel-control {
+  display: none;
+}
+
 .customers-benefit {
   background-color: var(--yellow-light);
   padding: 55px 0px 55px 0px;
@@ -308,7 +312,7 @@ h6.typography.cart-included-item_title {
   margin-bottom: 200px;
 }
 
-.benefit-items-wrapper {
+.carousel {
   display: flex;
   gap: 32px;
   margin-top: 40px;

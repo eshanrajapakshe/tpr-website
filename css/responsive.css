@@ -1,3 +1,65 @@
+@media screen and (max-width: 990px) and (min-width: 576px) {
+  /* CAROUSEL */
+  .carousel-control {
+    display: block;
+  }
+
+  .benefit-items-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 0;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .benefit-item {
+    min-width: 300px;
+    flex: 0 0 auto;
+    opacity: 0.5;
+    transform: scale(0.9);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .benefit-item.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 4px 6px -1px #0000001a;
+    transition: ease-in-out 0.2s;
+  }
+
+  .carousel-control:hover {
+    background-color: #f7f7f7;
+  }
+
+  .carousel-control.prev {
+    left: 10px;
+  }
+
+  .carousel-control.next {
+    right: 10px;
+  }
+  /* END CAROUSEL */
+}
+
 @media screen and (max-width: 990px) {
   .cart-main {
     gap: 0;
@@ -12,11 +74,6 @@
 
   .order-summary {
     width: calc(100% - 64px);
-  }
-
-  .benefit-items-wrapper {
-    display: flex;
-    justify-content: center;
   }
 
   .benefit-item {
@@ -82,7 +139,8 @@
 }
 
 @media screen and (min-width: 577px) {
-  .order-summary-title img {
+  .order-summary-title img,
+  .mobile-cart-view {
     display: none;
   }
 }
@@ -117,7 +175,7 @@
   h4.typography.cart-item_title,
   h4.typography.cart-item_price,
   h4.typography.summary-item-name,
-  h4.typography.summary-item-price  {
+  h4.typography.summary-item-price {
     font-size: 16px;
     line-height: 24px;
   }
@@ -272,7 +330,15 @@
     border: none;
   }
 
-  .typography.order-confirmed-title{
+  .typography.order-confirmed-title {
     font-size: 24px;
+  }
+
+  .carousel{
+    flex-direction: column;
+  }
+
+  .benefit-item {
+    width: calc(100% - 48px);
   }
 }

@@ -101,4 +101,68 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Carousel
+  const carousel = document.querySelector(".carousel");
+  const items = document.querySelectorAll(".benefit-item");
+  const prevButton = document.querySelector(".carousel-control.prev");
+  const nextButton = document.querySelector(".carousel-control.next");
+  const carouselWrapper = document.querySelector(".benefit-items-wrapper");
+  let currentIndex = 1; 
+
+  function updateCarousel() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 992 && screenWidth >= 576) {
+      const itemWidth = items[0].offsetWidth + 20;
+      const offset =
+        carouselWrapper.offsetWidth / 2 -
+        currentIndex * itemWidth -
+        itemWidth / 2;
+      carousel.style.transform = `translateX(${offset}px)`;
+    } else {
+      carousel.style.transform = "none";
+    }
+
+    items.forEach((item, index) => {
+      item.classList.remove("active");
+      if (index === currentIndex) {
+        item.classList.add("active");
+      }
+    });
+  }
+
+  function addEventListeners() {
+    prevButton.addEventListener("click", prevHandler);
+    nextButton.addEventListener("click", nextHandler);
+  }
+
+  function removeEventListeners() {
+    prevButton.removeEventListener("click", prevHandler);
+    nextButton.removeEventListener("click", nextHandler);
+  }
+
+  function prevHandler() {
+    currentIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+    updateCarousel();
+  }
+
+  function nextHandler() {
+    currentIndex = currentIndex === items.length - 1 ? 0 : currentIndex + 1;
+    updateCarousel();
+  }
+
+  function checkScreenSize() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 992 && screenWidth >= 576) {
+      addEventListeners();
+    } else {
+      removeEventListeners();
+    }
+    updateCarousel(); 
+  }
+
+  items[currentIndex].classList.add("active");
+  checkScreenSize();
+  window.addEventListener("resize", checkScreenSize);
+  window.addEventListener("resize", updateCarousel);
 });
