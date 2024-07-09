@@ -374,7 +374,8 @@ h3.typography.benefit-item-price {
 
 .pay-type,
 .address-verify-option-inner,
-.billing-address-option {
+.billing-address-option,
+.shipping-to-option-wrapper {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -387,6 +388,7 @@ h3.typography.benefit-item-price {
 
 .pay-type:hover,
 .address-verify-option-inner:hover,
+.shipping-to-option-wrapper:hover,
 .billing-address-option:hover {
   border-color: var(--selected);
   background-color: #f7f7f7;
@@ -528,7 +530,7 @@ h6.typography.cart-options-more-info-text {
   align-items: center;
   gap: 16px;
   padding-bottom: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   border-bottom: 1px solid var(--light-gray);
 }
 
@@ -901,7 +903,6 @@ pr-input#cvv {
 .order-confirmed {
   margin-top: 97px;
   margin-bottom: 97px;
-  padding: 50px 0;
 }
 
 .order-number,
@@ -1185,6 +1186,33 @@ h5.typography.address-verify-option-text {
 
 .read-more-wrapper .read-more-content.show {
   padding: 0;
+}
+
+.shipping-to-option-inner {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.shipping-to-option-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex: 1;
+}
+
+.shipping-address-text {
+  margin-bottom: 12px;
+}
+
+h5.typography.cart-item_type,
+h5.typography.cart-item_course_no {
+  color: #585858;
+}
+
+h5.typography.cart-item_course_no,
+h5.typography.cart-included-item_title {
+  font-weight: 400;
 }
 
 /* FOOTER */

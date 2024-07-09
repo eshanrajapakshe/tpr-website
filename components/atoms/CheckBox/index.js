@@ -18,7 +18,7 @@ class PRCheckBox extends HTMLElement {
     const label = this.getAttribute("label") || "";
 
     this.innerHTML = `<input class="pr-checkbox ${className}" id="styled-checkbox" type="checkbox">
-    <label for="styled-checkbox">${label}</label>`;
+    <label for="styled-checkbox"><span>${label}</span></label>`;
   }
 
   attributeChangedCallback(name, oldValue, newValue) {

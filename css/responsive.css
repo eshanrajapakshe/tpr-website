@@ -1,0 +1,278 @@
+@media screen and (max-width: 990px) {
+  .cart-main {
+    gap: 0;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .cart-items-main,
+  .checkout-main {
+    width: 100%;
+  }
+
+  .order-summary {
+    width: calc(100% - 64px);
+  }
+
+  .benefit-items-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .benefit-item {
+    width: 50%;
+  }
+
+  .benefit-title {
+    text-align: center;
+  }
+
+  .equal-payments-content {
+    padding: 0 38px 16px;
+    border-top: none;
+  }
+
+  .equal-payments-section .read-more-content.show {
+    border-top: 1px solid var(--gainsboro);
+    margin-left: -38px;
+    padding-left: 16px;
+    margin-right: -38px;
+  }
+
+  .extra-includes-title.width-100 {
+    margin-top: 0;
+  }
+
+  .desktop-cart-view {
+    display: none;
+  }
+
+  .mobile-cart-view {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-top: 1px solid var(--light-gray);
+    margin-bottom: 0;
+  }
+
+  .order-summary-item:not(:last-child) {
+    padding-bottom: 48px;
+    margin-bottom: 48px;
+  }
+
+  .payment-method-wrapper {
+    margin-bottom: 120px;
+  }
+
+  .shipping-to-option-inner {
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  .card-additional-info {
+    width: 70%;
+  }
+
+  .different-address-data {
+    margin-bottom: 0;
+  }
+
+  .access-your-order {
+    padding: 13.5px 54px;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .order-summary-title img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .benefit-item {
+    width: 100%;
+  }
+
+  .cart-item,
+  .extra-includes-header {
+    position: relative;
+
+    .cart-item_remove_wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .cart-item_info_wrapper,
+    .cart-item_price_wrapper,
+    .extra-includes-title,
+    .extra-includes-value {
+      margin-top: 32px;
+    }
+  }
+
+  .typography.main-heading {
+    font-size: 32px;
+  }
+
+  h4.typography.cart-item_title,
+  h4.typography.cart-item_price,
+  h4.typography.summary-item-name,
+  h4.typography.summary-item-price  {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  h5.typography.cart-item_date,
+  h5.typography.cart-includes-title,
+  .cart-included-item,
+  h5.typography.pay-type-title,
+  h5.typography.pay-type-price,
+  .typography.equal-payments-pay-type-title,
+  .typography.extra-include,
+  .extra-includes-value h5,
+  .typography.pay-type-details-text,
+  h5.typography.cart-item_type,
+  h5.typography.cart-item_course_no {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  h6.typography.cart-item_promo {
+    font-size: 12px;
+  }
+
+  .cart-included-item {
+    align-items: baseline;
+  }
+
+  .cart-included-item img {
+    position: relative;
+    top: 4px;
+  }
+
+  .extra-includes-header {
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .cart-item_price_wrapper,
+  .extra-includes-value {
+    width: min-content;
+  }
+
+  .cart-item_info_wrapper,
+  .extra-includes-title {
+    flex: 1;
+  }
+
+  .extra-includes-title.width-100 {
+    margin-top: 0;
+  }
+
+  .create-an-account-wrapper {
+    margin-top: 28px;
+  }
+
+  .tell-us-text {
+    margin-top: 32px;
+  }
+
+  .dual-wrapper {
+    flex-direction: column;
+  }
+
+  .switch-view-wrapper {
+    margin-top: 12px;
+  }
+
+  .shipping-wrapper,
+  .payment-method-wrapper {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .questions-wrapper {
+    margin-top: 24px;
+  }
+
+  .agree-to-terms-wrapper label {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .pr-checkbox {
+    & + label::before {
+      width: 17px;
+      min-width: 17px;
+      max-width: 17px;
+    }
+
+    &:checked + label:after {
+      top: 10px;
+    }
+  }
+
+  .typography.checkout-section-title,
+  .checkout-section-title-wrapper span,
+  .order-summary-title h3 {
+    font-size: 18px;
+  }
+
+  .checkout-section-title-wrapper span {
+    width: 24px;
+    height: 24px;
+  }
+
+  .checkout-section-title-wrapper span img {
+    width: 14px;
+  }
+
+  .switch-view-wrapper .switch-view-text,
+  .switch-view {
+    font-size: 16px;
+  }
+
+  .order-summary-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .order-summary-title h4 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .order-summary {
+    border: none;
+  }
+
+  .shipping-state {
+    flex-direction: row;
+  }
+
+  .verify-address-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .shipping-btn,
+  .address-edit-btn,
+  .address-use-btn {
+    width: 100%;
+    margin-left: unset;
+  }
+
+  .access-your-order {
+    padding: 13.5px 54px;
+    width: 100%;
+  }
+
+  .order-confirmed .card-style-2 {
+    border: none;
+  }
+
+  .typography.order-confirmed-title{
+    font-size: 24px;
+  }
+}

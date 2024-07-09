@@ -18,9 +18,10 @@
 
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
-    <header-component></header-component>
+    <!-- <header-component></header-component> -->
 
     <div class="container cart-wrapper">
       <div class="cart-title">
@@ -253,9 +254,11 @@
                   ></pr-typography>
                 </div>
 
-                <button class="cart-item_remove">
-                  <img src="./assets/images/close.svg" />
-                </button>
+                <div class="cart-item_remove_wrapper">
+                  <button class="cart-item_remove">
+                    <img src="./assets/images/close.svg" />
+                  </button>
+                </div>
               </div>
               <div class="extra-includes-description">
                 <pr-typography
@@ -368,7 +371,7 @@
 
                 <div class="extra-includes-wrapper">
                   <div class="extra-includes-header">
-                    <div class="extra-includes-title">
+                    <div class="extra-includes-title width-100">
                       <img src="./assets/images/checked.svg" alt="" />
                       <pr-typography
                         text="Better Grades Guarantee<sup>TM</sup>"
@@ -583,7 +586,7 @@
       </div>
     </div>
 
-    <footer-component></footer-component>
+    <!-- <footer-component></footer-component> -->
     <script src="./js/main.js"></script>
   </body>
 </html>

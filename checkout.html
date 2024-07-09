@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TPR | Checkout</title>
 
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-
     <script src="components/header.js" type="text/javascript" defer></script>
     <script src="components/footer.js" type="text/javascript" defer></script>
 
@@ -17,9 +14,14 @@
     <script src="components/atoms/CheckBox/index.js" defer></script>
     <script src="components/atoms/RadioButton/index.js" defer></script>
     <script src="components/atoms/Select/index.js" defer></script>
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
-    <header-component></header-component>
+    <!-- <header-component></header-component> -->
 
     <div class="container cart-wrapper">
       <div class="cart-title">
@@ -28,6 +30,119 @@
           type="h1"
           elem-class="main-heading"
         ></pr-typography>
+      </div>
+
+      <div class="accordion order-summary-cart-wrapper mobile-cart-view">
+        <button type="button" id="cart-accordion" class="accordion-button">
+          <div class="order-summary-cart">
+            <div class="order-summary-cart-info">
+              <img src="./assets/images/shopping_cart.svg" alt="" />
+              <pr-typography
+                text="Cart"
+                type="h5"
+                elem-class="summary-cart-name"
+              ></pr-typography>
+              <pr-typography
+                text="(2 items)"
+                type="h5"
+                elem-class="summary-cart-count"
+              ></pr-typography>
+            </div>
+
+            <img src="./assets/images/arrow-down.svg" class="accordion-icon" />
+          </div>
+        </button>
+
+        <div class="accordion-body">
+          <div class="order-summary-items-wrapper">
+            <div class="order-summary-item">
+              <div class="order-summary-item-info">
+                <div class="order-summary-item-info-inner">
+                  <pr-typography
+                    text="MCAT 515+ Summer Immersion LiveOnline"
+                    type="h5"
+                    elem-class="summary-item-name"
+                  ></pr-typography>
+                  <pr-typography
+                    text="6/15/24 - 8/3/24"
+                    type="h6"
+                    elem-class="cart-item_date"
+                  ></pr-typography>
+                  <pr-typography
+                    text="Online Classroom"
+                    type="h6"
+                    elem-class="cart-item_type"
+                  ></pr-typography>
+                  <pr-typography
+                    text="Course 535271"
+                    type="h6"
+                    elem-class="cart-item_course_no"
+                  ></pr-typography>
+                </div>
+
+                <div class="order-summary-item-price-inner">
+                  <pr-typography
+                    text="$6,849.00"
+                    type="h5"
+                    elem-class="summary-item-price"
+                  ></pr-typography>
+                  <pr-typography
+                    text="$7,349.00"
+                    type="h6"
+                    elem-class="summary-item-price-discount"
+                  ></pr-typography>
+                </div>
+              </div>
+
+              <div class="cart-includes-wrapper">
+                <pr-typography
+                  text="Includes:"
+                  type="h5"
+                  elem-class="cart-includes-title"
+                ></pr-typography>
+
+                <div class="cart-included-items-wrapper">
+                  <div class="cart-included-item">
+                    <img src="./assets/images/icon-checkmark.svg" alt="" />
+                    <pr-typography
+                      text="MCAT Optional Topic Focus Sessions"
+                      type="h6"
+                      elem-class="cart-included-item_title"
+                    ></pr-typography>
+                  </div>
+                  <div class="cart-included-item">
+                    <img src="./assets/images/icon-checkmark.svg" alt="" />
+                    <pr-typography
+                      text="MCAT Optional Topic Focus Sessions"
+                      type="h6"
+                      elem-class="cart-included-item_title"
+                    ></pr-typography>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-summary-item">
+              <div class="order-summary-item-info">
+                <div class="order-summary-item-info-inner">
+                  <pr-typography
+                    text="MCAT 515+ Summer Immersion LiveOnline"
+                    type="h5"
+                    elem-class="summary-item-name"
+                  ></pr-typography>
+                </div>
+
+                <div class="order-summary-item-price-inner">
+                  <pr-typography
+                    text="$6,849.00"
+                    type="h5"
+                    elem-class="summary-item-price"
+                  ></pr-typography>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Checkout -->
@@ -122,10 +237,11 @@
         <!-- Order Summary -->
         <div class="card-style-2 order-summary">
           <div class="order-summary-title">
+            <img src="./assets/images/page.svg" alt="">
             <pr-typography text="Order Summary" type="h4"></pr-typography>
           </div>
 
-          <div class="accordion order-summary-cart-wrapper">
+          <div class="accordion order-summary-cart-wrapper desktop-cart-view">
             <button type="button" id="cart-accordion" class="accordion-button">
               <div class="order-summary-cart">
                 <div class="order-summary-cart-info">
@@ -360,7 +476,7 @@
       </div>
     </div>
 
-    <footer-component></footer-component>
+    <!-- <footer-component></footer-component> -->
     <script src="./js/main.js"></script>
   </body>
 </html>
